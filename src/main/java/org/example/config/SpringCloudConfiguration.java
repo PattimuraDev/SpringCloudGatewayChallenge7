@@ -5,9 +5,19 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Kelas untuk representasi konfigurasi dari semua route/alamat
+ * microservice beserta semua endpointnya
+ * @author Dwi Satria Patra
+ */
 @Configuration
 public class SpringCloudConfiguration {
 
+    /**
+     * Method untuk menginputkan dan mencari semua lokasi dari microservice yang ada
+     * @param builder parameter untuk route locator builder
+     * @return objek route locator yang bisa mencari lokasi semua microservice
+     */
     @Bean
     public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
